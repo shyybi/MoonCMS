@@ -6,7 +6,7 @@ import Second from "./parts/Second";
 const LandingMain = () => {
   return (
     <>
-			<div className="mx-52">
+			<div className="h-full">
 				<Hero />
 				<Second />
 			</div>
