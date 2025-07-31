@@ -5,7 +5,7 @@ interface HeaderProps {
 
 const Header = ({ isDarkBg }: HeaderProps) => {
 	return (
-		<div className={`h-14 flex flex-row items-center  ${isDarkBg ? "text-white" : "text-black"}`}>
+		<div className={`h-14 flex flex-row items-center mx-52 ${isDarkBg ? "text-white" : "text-black"}`}>
 			<div className="flex flex-row space-x-10 text-xl">
 				<a>Home</a>
 				<a>About</a>

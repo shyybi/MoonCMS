@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "@/components/ui/Header";
 import Image from "next/image";
 import placeholder from "@/public/img/placeholder.png";
+import Footer from "@/components/ui/Footer";
 
 const bgColor = "#0c1530"
 
@@ -17,15 +18,18 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<div className="h-[40rem]  " style={{ backgroundColor: bgColor }}>
-			<div className="mx-52">
+		<div className="h-[40rem]" style={{ backgroundColor: bgColor }}>
+			<div>
 				<Header isDarkBg={isDarkBg} />
 			</div>
-			<div className="flex -mt-15 flex-col items-center justify-center h-full " >
+			<div className="flex -mt-15 flex-col items-center justify-center h-full" >
 				<Image src={placeholder} alt="Placeholder image" width={124}/>
 				<a className={`text-2xl mt-5 ${isDarkBg ? "text-white" : "text-black"}`}>
 					Description PlaceHolder
 				</a>
+			</div>
+			<div style={{ backgroundColor: bgColor, position: "absolute", bottom: 0, width: "100%" }}>
+				<Footer isDarkBg={isDarkBg} />
 			</div>
 		</div>
 	);
