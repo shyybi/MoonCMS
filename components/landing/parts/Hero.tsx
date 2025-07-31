@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "@/components/landing/Lanes/Header";
+import Header from "@/components/ui/Header";
 import Image from "next/image";
 import placeholder from "@/public/img/placeholder.png";
 
