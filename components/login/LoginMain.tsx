@@ -7,7 +7,7 @@ interface LandingMainProps {
   isDarkBg: boolean;
 }
 
-const AboutMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
+const LoginMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
   return (
     <>
       <div className="h-full">
@@ -19,4 +19,4 @@ const AboutMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
   );
 };
 
-export default AboutMain;
+export default LoginMain;

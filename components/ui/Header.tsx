@@ -14,7 +14,9 @@ const Header = ({ isDarkBg }: HeaderProps) => {
 			<button
 				className={`ml-auto mt-3 px-6 py-1 text-lg rounded-2xl ${isDarkBg ? "bg-white text-black" : "bg-black text-white"}`}
 			>
-				Login
+				<Link href="/login">
+					Login
+				</Link>
 			</button>
 		</div>
 	)
