@@ -2,22 +2,21 @@ import React from "react";
 import Header from "../ui/Header";
 import Main from "./parts/Main";
 import Footer from "../ui/Footer";
-
-interface LoginMainProps {
+interface LandingMainProps {
   bgColor: string;
   isDarkBg: boolean;
 }
 
-const LoginMain = ({ bgColor, isDarkBg }: LoginMainProps) => {
+const DashMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
   return (
     <>
       <div className="h-full">
-        <Header isDarkBg={isDarkBg} />
-        <Main bgColor={bgColor} isDarkBg={isDarkBg} />
-        <Footer isDarkBg={isDarkBg} />
+				<Header isDarkBg={isDarkBg} />
+				<Main/>
+				<Footer isDarkBg={isDarkBg} />
       </div>
     </>
   );
 };
 
-export default LoginMain;
+export default DashMain;

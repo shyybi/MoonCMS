@@ -16,7 +16,9 @@ const Second = () => {
   return (
 	<div style={{ backgroundColor: bgColorSecond}} className="h-full min-h-96 ">
 	  <div className="mx-52">
-			
+			<article>
+				
+			</article>
 		</div>
 	</div>
   );
