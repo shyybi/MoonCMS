@@ -1,20 +1,48 @@
-import React from "react";
-import SideBar from "./ui/SideBar";
-import Main from "./parts/Main";
-import Footer from "../ui/Footer";
-interface LandingMainProps {
+import React, { useState } from "react";
+import SideBar, { DashboardCategory } from "./ui/SideBar";
+import Posts from "./pages/Posts";
+import Pages from "./pages/Pages";
+import Tags from "./pages/Tags";
+import Members from "./pages/Members";
+import Settings from "./pages/Settings";
+
+interface DashMainProps {
   bgColor: string;
   isDarkBg: boolean;
 }
 
-const DashMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
+const DashMain = ({ bgColor, isDarkBg }: DashMainProps) => {
+  const [category, setCategory] = useState<DashboardCategory>("posts");
+
+  const renderContent = () => {
+    switch (category) {
+      case "posts":
+        return <Posts />;
+      case "pages":
+        return <Pages />;
+      case "tags":
+        return <Tags />;
+      case "members":
+        return <Members />;
+      case "settings":
+        return <Settings />;
+      default:
+        return <Posts />;
+    }
+  };
+
   return (
-    <>
-      <div className="h-full bg-white min-h-screen">
-				<SideBar bgColor={bgColor} isDarkBg={isDarkBg} />
-				<Main/>
-      </div>
-    </>
+    <div className="flex min-h-screen">
+      <SideBar
+        bgColor={bgColor}
+        isDarkBg={isDarkBg}
+        category={category}
+        setCategory={setCategory}
+      />
+      <main className="flex-1 p-8 bg-gray-50">
+        {renderContent()}
+      </main>
+    </div>
   );
 };
 
