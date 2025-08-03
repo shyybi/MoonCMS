@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../ui/Header";
+import SideBar from "./ui/SideBar";
 import Main from "./parts/Main";
 import Footer from "../ui/Footer";
 interface LandingMainProps {
@@ -10,10 +10,9 @@ interface LandingMainProps {
 const DashMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
   return (
     <>
-      <div className="h-full">
-				<Header isDarkBg={isDarkBg} />
+      <div className="h-full bg-white min-h-screen">
+				<SideBar/>
 				<Main/>
-				<Footer isDarkBg={isDarkBg} />
       </div>
     </>
   );
