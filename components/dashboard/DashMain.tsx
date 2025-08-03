@@ -11,7 +11,7 @@ const DashMain = ({ bgColor, isDarkBg }: LandingMainProps) => {
   return (
     <>
       <div className="h-full bg-white min-h-screen">
-				<SideBar/>
+				<SideBar bgColor={bgColor} isDarkBg={isDarkBg} />
 				<Main/>
       </div>
     </>
